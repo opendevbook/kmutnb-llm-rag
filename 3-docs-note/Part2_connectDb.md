@@ -633,7 +633,7 @@ import ollama
 prompt = "ประเทศไทยมีประชากรเท่าไหร่"  # Fixed typo ("ประขาการ" → "ประชากร")
 
 response = ollama.chat(
-    model="llama3",  # Correct model name (likely "llama3", not "llama3.2")
+    model="llama3.2",  # Correct model name (likely "llama3", not "llama3.2")
     messages=[
         {"role": "system", "content": "You are a helpful assistant."},
         {"role": "user", "content": prompt}
@@ -642,7 +642,7 @@ response = ollama.chat(
 
 print(response["message"]["content"])import ollama
 ```
-
+![](./images/test-ollama.png)
 
 # generate Response from ollama
 ```python
@@ -669,7 +669,7 @@ Question: {query_text}
     # 4. Generate response using Ollama
     try:
         response = ollama.chat(
-            model="llama3",  # Corrected model name (no "llama3.2")
+            model="llama3.2",  # Corrected model name (no "llama3.2")
             messages=[
                 {"role": "system", "content": "You are a helpful assistant that answers questions about Thailand."},
                 {"role": "user", "content": prompt}
@@ -689,3 +689,4 @@ Question: {query_text}
 # Example usage
 generate_response("วันสงกรานต์")
 ```
+![](./images/test-rag.png)
