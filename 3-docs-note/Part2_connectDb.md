@@ -630,10 +630,10 @@ print(resutls)
 
 import ollama
 
-prompt = "ประเทศไทยมีประชากรเท่าไหร่"  # Fixed typo ("ประขาการ" → "ประชากร")
+prompt = "ประเทศไทยมีประชากรเท่าไหร่"  
 
 response = ollama.chat(
-    model="llama3.2",  # Correct model name (likely "llama3", not "llama3.2")
+    model="llama3.2",  
     messages=[
         {"role": "system", "content": "You are a helpful assistant."},
         {"role": "user", "content": prompt}
